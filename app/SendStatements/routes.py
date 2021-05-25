@@ -42,6 +42,7 @@ def save():
             if os.path.exists('app/base/static/files/Demand/' + filename):
                 save_file = FileInputStorage(fileName=filename,
                                              filePath=file_Path, fileType="DemandFile", save_at=datetime.now(),
+
                                              status="Pending")
                 app.db.session.add(save_file)
                 app.db.session.commit()
