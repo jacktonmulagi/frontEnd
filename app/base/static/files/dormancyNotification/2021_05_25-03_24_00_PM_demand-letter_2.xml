@@ -1,0 +1,20 @@
+<DemandLetter>
+<type>DemandLetter</type>
+<title>PRIVATE AND CONFIDENTIAL</title>
+<address>BRAMBA EXPRESS
+SERVICES LTS
+PO BOX 88749-80100
+MOMBASA
+</address>
+<segment>Personal and Business banking</segment>
+<demandDate>22nd June, 2016</demandDate>
+<drafter>
+Eric Ngeera
+</drafter>
+<branchCode>001</branchCode>
+<branchName>Branch Manager, Digo Road Branch</branchName>
+<accountNumber>123456</accountNumber>
+<amount>12,627.85</amount>
+<interesetRate>13.5</interesetRate>
+<margin>10</margin>
+</DemandLetter>

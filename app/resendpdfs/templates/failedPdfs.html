@@ -1,0 +1,80 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+  <div class="right_col" role="main">
+    <div class="">
+      <div class="page-title">
+
+
+      </div>
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Failed To Sent</h2>
+
+
+              <div class="clearfix"></div>
+            </div>
+              <div class="row tile_count">
+      <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"> Total Failed</span>
+        <div class="count">{{ failed_pdfs }}</div>
+        <span class="count_bottom"><i class="green">4% </i> Today</span>
+      </div>
+                   <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top">Total Failed <br>Bank DemandLetter</span>
+        <div class="count">{{ demand }}</div>
+        <span class="count_bottom"><i class="green">4% </i> Today</span>
+      </div>
+                   <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top">Total Failed <br>Bank UfALetter</span>
+        <div class="count">{{ uffa }}</div>
+        <span class="count_bottom"><i class="green">4% </i> Today</span>
+      </div>
+                   <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top">Total Failed <br> Bank DormancyLetter</span>
+        <div class="count">{{ dormancy }}</div>
+        <span class="count_bottom"><i class="green">4% </i> Today</span>
+      </div>
+                   <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"> Total Failed <br> Bank Statements</span>
+        <div class="count">{{ bankstatement }}</div>
+        <span class="count_bottom"><i class="green"> </i> Today</span>
+      </div>
+    </div>
+            <div class="x_content">
+              <br />
+              <form  action = "{{url_for('resendpdfs_blueprint.resend') }}" method = "POST" id="demo-form2" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Click the button below  <span class="required"></span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="hidden" id="first-name" required="required" name="file" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+
+                    <button type="submit" class="btn btn-success">Resend</button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+{% endblock content %}
+
+{% block javascripts %}
+  {{ super()}}
+  <!-- Parsley -->
+  <script src="{{ url_for('static', filename='vendors/parsleyjs/dist/parsley.min.js') }}"></script>
+{% endblock javascripts %}
